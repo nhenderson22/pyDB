@@ -1,16 +1,26 @@
-from unicodedata import name
-
-
+from unicodedata import name 
 import os
+import json
 
 class DataBase():
-    def __init__(self, name):
-        self.name = name
+    def __init__(self, path):
+        self.path = path
+        self.current = open(self.path)
+    #initializes a new table in the database 
+    def addData(self,data):
+       temp = json.dumps(data)
+       print(temp)
+       with open(self.path, 'w') as f:
+           f.write(temp)
+# Creates a table that can be added to our database
+    def createTable(self,key,data):
+        x = {str(key): data}
+        jsonObj = json.dumps(x)
+        return jsonObj
     
-    def addKey(self, key, value):
-        with open(str(key) + '.txt' , 'w') as f:
-            f.write(str(value))
-    
-    def getKey(self, key):
-        with open(str(key) + '.txt','r') as f:
-            print(f.read())
+    def write(self,jsonObj):
+        with open(self.path, 'w') as f:
+            f.write(jsonObj)
+
+    def removeData(key):
+        pass

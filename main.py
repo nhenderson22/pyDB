@@ -1,6 +1,4 @@
 from database import DataBase
 
-db = DataBase("Hello")
-db.addKey(1,2)
-db.getKey(1)
-print("test")
+db = DataBase('./test.json')
+db.addData({'tes2t':'Tesst1'})
