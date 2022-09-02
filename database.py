@@ -1,4 +1,4 @@
-from unicodedata import name 
+
 import os
 import json
 
@@ -22,7 +22,4 @@ class DataBase():
     def convertToJson(self):
         jsonObj = json.dumps(self.current)
         return jsonObj
-# Used to update a tables data (can only handle a table)
-    def updateData(self, key, newData):
-        self.current[key] = newData
-     
+
