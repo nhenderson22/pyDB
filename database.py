@@ -21,5 +21,8 @@ class DataBase():
     def convertToJson(self):
         jsonObj = json.dumps(self.current)
         return jsonObj
+    
     def getTable(self, key):
-        return self.current(key)
+        return self.current[key]
+
+     
