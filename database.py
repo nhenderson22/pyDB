@@ -19,6 +19,8 @@ class DataBase():
     def createTable(self,key,data):
         x = {str(key): data}
         self.current.update(x)
+    def updateTable(self,key, data):
+        self.current[key].update(data)
 # Writes to the database    
     def write(self):
         with open(self.path, 'w') as f:
