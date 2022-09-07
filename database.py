@@ -20,7 +20,7 @@ class DataBase():
         x = {str(key): data}
         self.current.update(x)
 # Useful when new data is being created if you want to manipulate existing data then just access it via dictionary
-# syntad (self.current[key][key] = new)
+# syntax (self.current[key][key] = new)
     def updateTable(self,key, data):
         self.current[key].update(data)
 # Writes to the database    
