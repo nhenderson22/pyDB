@@ -1,7 +1,6 @@
 import os
 import json
 from os.path import exists
-
 class DataBase():
     def __init__(self, path):
         self.path = path
