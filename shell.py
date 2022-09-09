@@ -9,7 +9,7 @@ while running and db.exists:
     x=input("Command:")
     if x == "getTable":
         y = input("Key:")
-        print(db.getTable(y))
+        print(db.current[y])
     elif x == "createTable":
         y = input("key: ")
         z = json.loads(input("Dictionary: "))

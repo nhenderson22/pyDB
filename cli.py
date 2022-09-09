@@ -6,7 +6,8 @@ app = typer.Typer()
 @app.command()
 def get(path:str,key:str):
     db = DataBase(path)
-    print(db.getTable(key))
+    print(db.current[key])
+
 @app.command()
 def create(path:str,key:str,info:str):
     db = DataBase(path)

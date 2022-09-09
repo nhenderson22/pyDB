@@ -26,9 +26,5 @@ class DataBase():
     def write(self):
         with open(self.path, 'w') as f:
             f.write(json.dumps(self.current))
-# Useful for my shell and CLI its probably easier to just use dictionary keys when using it in software
-# Readability may be a factor I guess
-    def getTable(self, key):
-        return self.current[key]
-
+    
      
