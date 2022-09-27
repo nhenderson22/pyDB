@@ -1,2 +1,2 @@
 # pyDB
-A relational database written in python for fun
+A documentdatabase written in python for fun
